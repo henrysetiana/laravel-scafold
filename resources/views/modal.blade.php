@@ -6,6 +6,7 @@
                placeholder="Enter name" value="{{ isset($user) ? $user->name : old('name')}}">
     </div>
 </div>
+{{!! var_dump($modal) !!}}
 <div class="form-group row">
     <label for="input_email" class="col-sm-2 col-form-label">Email:</label>
     <div class="col-sm-10">

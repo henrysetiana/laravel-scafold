@@ -60,13 +60,16 @@ class stgRejectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, Request $request)
+    public function show($id, Request $request, StgRejectGridInterface $stgRejectGrid)
     {
         //
+        $stgRejectGrid->setColumns();
         $modal = [
             'model' => class_basename(User::class),
-            'route' => route('stgreject.store'),
-            'action' => 'create',
+            'route' => route('stgreject.update',$id),
+            'action' => 'show',
+            'columns' =>$stgRejectGrid->columns,
+            'id' =>$id,
             'pjaxContainer' => $request->get('ref'),
         ];
 
