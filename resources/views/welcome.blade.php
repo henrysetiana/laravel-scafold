@@ -17,6 +17,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
 <!-- grid's css (required) -->
 <link rel="stylesheet" type="text/css" href="{{ asset('vendor/leantony/grid/css/grid.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}" />
 </head>
 <body>
 
