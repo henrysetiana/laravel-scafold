@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\stgRejectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,4 +11,4 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('/accounts', 'UserController');
+Route::resource('/stgReject', 'stgRejectController');

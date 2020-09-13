@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Grids\AccountsGridInterface;
-use App\Grids\AccountsGrid;
+use App\Grids\StgRejectGridInterface;
+use App\Grids\StgRejectGrid;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
      public function register()
      {
-         $this->app->bind(AccountsGridInterface::class, AccountsGrid::class);
+          $this->app->bind(StgRejectGridInterface::class, StgRejectGrid::class);
      }
 
 

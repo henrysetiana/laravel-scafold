@@ -3,26 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Grids\AccountsGridInterface;
-use App\Grids\AccountsGrid;
-use App\Accounts;
+use App\Grids\StgRejectGridInterface;
+use App\Grids\StgRejectGrid;
+use App\stgReject;
 
-class UserController extends Controller
+class stgRejectController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(AccountsGridInterface $accountsGrid, Request $request)
-    {
-        // the 'query' argument needs to be an instance of the eloquent query builder
-        // you can load relationships at this point
-        $query = Accounts::query();
-        return $accountsGrid
-                    ->create(['query' => $query, 'request' => $request])
-                    ->renderOn('welcome'); // render the grid on the welcome view
-    }
+     public function index(StgRejectGridInterface $stgRejectGrid, Request $request)
+     {
+         // the 'query' argument needs to be an instance of the eloquent query builder
+         // you can load relationships at this point
+         $query = stgReject::query();
+         return $stgRejectGrid
+                     ->create(['query' => $query, 'request' => $request])
+                     ->renderOn('welcome'); // render the grid on the welcome view
+     }
 
     /**
      * Show the form for creating a new resource.
