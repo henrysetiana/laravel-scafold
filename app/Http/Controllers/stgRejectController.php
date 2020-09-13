@@ -18,7 +18,7 @@ class stgRejectController extends Controller
      {
          // the 'query' argument needs to be an instance of the eloquent query builder
          // you can load relationships at this point
-         $query = stgReject::query();
+         $query = stgReject::orderBy('penpok', 'DESC');
          return $stgRejectGrid
                      ->create(['query' => $query, 'request' => $request])
                      ->renderOn('welcome'); // render the grid on the welcome view
@@ -99,7 +99,8 @@ class stgRejectController extends Controller
     public function update(Request $request, $id, StgRejectGridInterface $stgRejectGrid)
     {
       $stgReject = stgReject::find($id);
-      
+      $stgReject->fill($request->all())->save();
+      return response()->json(['message' => 'record '.$id.' is updated' , 'success' => true]);
     }
 
     /**
