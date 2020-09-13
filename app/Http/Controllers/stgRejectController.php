@@ -29,9 +29,18 @@ class stgRejectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        $modal = [
+            'model' => class_basename(User::class),
+            'route' => route('stgreject.store'),
+            'action' => 'create',
+            'pjaxContainer' => $request->get('ref'),
+        ];
+
+        // modal
+        return view('modal', compact('modal'))->render();
     }
 
     /**
@@ -51,9 +60,18 @@ class stgRejectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, Request $request)
     {
         //
+        $modal = [
+            'model' => class_basename(User::class),
+            'route' => route('stgreject.store'),
+            'action' => 'create',
+            'pjaxContainer' => $request->get('ref'),
+        ];
+
+        // modal
+        return view('modal', compact('modal'))->render();
     }
 
     /**
