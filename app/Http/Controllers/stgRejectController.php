@@ -18,10 +18,12 @@ class stgRejectController extends Controller
      {
          // the 'query' argument needs to be an instance of the eloquent query builder
          // you can load relationships at this point
+                              // dd($request);exit;  
          $query = stgReject::orderBy('penpok', 'DESC');
          return $stgRejectGrid
                      ->create(['query' => $query, 'request' => $request])
                      ->renderOn('welcome'); // render the grid on the welcome view
+
      }
 
     /**
