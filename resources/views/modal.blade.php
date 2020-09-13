@@ -1,17 +1,20 @@
 {!! Modal::start($modal) !!}
-<div class="form-group row">
-    <label for="input_name" class="col-sm-2 col-form-label">Name:</label>
-    <div class="col-sm-10">
-        <input type="text" class="form-control" id="input_name" name="name"
-               placeholder="Enter name" value="{{ isset($user) ? $user->name : old('name')}}">
-    </div>
-</div>
-{{!! var_dump($modal) !!}}
-<div class="form-group row">
-    <label for="input_email" class="col-sm-2 col-form-label">Email:</label>
-    <div class="col-sm-10">
-        <input type="email" class="form-control" id="input_email"
-               name="email" placeholder="Enter email" value="{{ isset($user) ? $user->email : old('email')}}">
-    </div>
-</div>
+
+
+
+<?php foreach ($modal['column'] as $key => $value): ?>
+<?php if ( isset($modal['stgreject'][$key]) ): ?>
+  <div class="form-group row">
+      <label for="input_name" class="col-sm-2 col-form-label">{!! $key !!}</label>
+      <div class="col-sm-10">
+          <input type="text" class="form-control" id="{{$key}}" name="{{$key}}"
+                 placeholder="Enter String" value="{{ $modal['stgreject'][$key] }}">
+      </div>
+  </div>
+<?php endif; ?>
+<?php endforeach; ?>
+
+
+
+
 {!! Modal::end() !!}

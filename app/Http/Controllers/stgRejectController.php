@@ -65,11 +65,12 @@ class stgRejectController extends Controller
         //
         $stgRejectGrid->setColumns();
         $modal = [
-            'model' => class_basename(User::class),
+            'model' => class_basename(stgReject::class),
             'route' => route('stgreject.update',$id),
-            'action' => 'show',
-            'columns' =>$stgRejectGrid->columns,
-            'id' =>$id,
+            'action' => 'update',
+            'method' => 'PUT',
+            'column' => $stgRejectGrid->columns,
+            'stgreject' => stgReject::where('unique_key','=', $id)->firstOrFail()->toArray(),
             'pjaxContainer' => $request->get('ref'),
         ];
 
@@ -95,9 +96,10 @@ class stgRejectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, StgRejectGridInterface $stgRejectGrid)
     {
-        //
+      $stgReject = stgReject::find($id);
+      
     }
 
     /**
