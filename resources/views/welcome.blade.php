@@ -6,7 +6,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>My application</title>
+<title>Xeratic Apps</title>
 <!-- font awesome (required) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 <!-- progress bar (not required, but cool) -->
@@ -21,18 +21,19 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<nav class="navbar navbar-expand-sm navbar-dark">
 <ul class="navbar-nav">
     <li class="nav-item">
-        <a class="navbar-brand" href="/">My appliation</a>
+        <img src="{{ asset('images/xeratic-long-sm.png') }}"/>
+    </li>
+    <li class="nav-item">
+        <a class="" href="/stgreject">Stg Reject</a>
     </li>
 </ul>
 </nav>
 
-<div class="container" style="margin-bottom: 100px;">
-<div class="row">
+<div class="container-fluid" style="margin-bottom: 100px; padding-top:30px;">
     {!! $grid !!}
-</div>
 </div>
 
 <!-- modal container (required if you need to render dynamic bootstrap modals) -->
