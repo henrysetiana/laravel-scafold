@@ -11,4 +11,4 @@ use App\Http\Controllers\stgRejectController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('/stgReject', 'stgRejectController');
+Route::resource('/stgreject', 'stgRejectController');

@@ -675,12 +675,12 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
     public function setRoutes()
     {
         // searching, sorting and filtering
-        $this->setIndexRouteName('stgrejects.index');
+        $this->setIndexRouteName('stgreject.index');
 
         // crud support
-        $this->setCreateRouteName('stgrejects.create');
-        $this->setViewRouteName('stgrejects.show');
-        $this->setDeleteRouteName('stgrejects.destroy');
+        $this->setCreateRouteName('stgreject.create');
+        $this->setViewRouteName('stgreject.show');
+        $this->setDeleteRouteName('stgreject.destroy');
 
         // default route parameter
         $this->setDefaultRouteParameter('unique_key');
