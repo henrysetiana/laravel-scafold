@@ -20,9 +20,9 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
      * @var array
      */
     protected $buttonsToGenerate = [
-        'create',
+        // 'create',
         'view',
-        'delete',
+        // 'delete',
         'refresh',
         'export'
     ];
@@ -40,18 +40,23 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
     * @return void
     * @throws \Exception if an error occurs during parsing of the data
     */
+
+    protected $tableColumns = [
+      "kdjnstrans"
+    ];
+
     public function setColumns()
     {
         $this->columns = [
-		    "unique_key" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
+        "unique_key" => [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "="
+            ]
+        ],
 		    "tgldapem" => [
 		        "search" => [
 		            "enabled" => true
@@ -133,538 +138,629 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
 		            "operator" => "="
 		        ]
 		    ],
-		    "tkd" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tpp" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tpajak" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tberas" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tcacat" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "ttewas" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tbulat" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "kotor" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "ppajak" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "paskes" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "pkpkn" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "pkasda" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "ptaspen" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "psewa" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "passos" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "palimentasi" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "potongan" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "bersih" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "kodebyr" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "kdjnsdapem" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "namapensiunan" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tgl_lahir_pensiunan" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "nama_penerima" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tgl_lahir_penerima" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "kodecabang" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tmtpensiun" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "nomor_skep" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tanggal_skep" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "penerbit_skep" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "nip" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "norutdapem" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "kdpangkat" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "norek" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "kdhubkel" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "rapel" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tdahor" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "kdhitung" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "kdsifatpok" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "masker" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "jmlistri" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "npwp" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tgldiambil" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "infobank" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tgr" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "jnssetor" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tglsetor" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "updstamp" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "inputer" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "kdotentikasi" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "number_of_error" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "error_desc" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "error_fields" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "error_codes" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "thn_tgldapem" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "thn_tgl_skep" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "cleansing_flag" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "cleansing_date" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "cleansed_column" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "created_at" => [
-		        "sort" => false,
-		        "date" => "true",
-		        "filter" => [
-		            "enabled" => true,
-		            "type" => "date",
-		            "operator" => "<="
-		        ]
-		    ]
 		];
+      // $this->columns = [
+      // "unique_key" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tgldapem" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "kdjnstrans" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "jenis" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "notas" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "kdjiwa" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "penpok" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tistri" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tanak" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tp" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tkd" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tpp" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tpajak" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tberas" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tcacat" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "ttewas" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tbulat" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "kotor" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "ppajak" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "paskes" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "pkpkn" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "pkasda" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "ptaspen" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "psewa" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "passos" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "palimentasi" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "potongan" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "bersih" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "kodebyr" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "kdjnsdapem" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "namapensiunan" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tgl_lahir_pensiunan" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "nama_penerima" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tgl_lahir_penerima" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "kodecabang" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tmtpensiun" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "nomor_skep" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tanggal_skep" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "penerbit_skep" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "nip" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "norutdapem" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "kdpangkat" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "norek" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "kdhubkel" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "rapel" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tdahor" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "kdhitung" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "kdsifatpok" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "masker" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "jmlistri" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "npwp" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tgldiambil" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "infobank" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tgr" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "jnssetor" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "tglsetor" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "updstamp" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "inputer" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "kdotentikasi" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "number_of_error" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "error_desc" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "error_fields" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "error_codes" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "thn_tgldapem" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "thn_tgl_skep" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "cleansing_flag" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "cleansing_date" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "cleansed_column" => [
+      //     "search" => [
+      //         "enabled" => true
+      //     ],
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "operator" => "="
+      //     ]
+      // ],
+      // "created_at" => [
+      //     "sort" => false,
+      //     "date" => "true",
+      //     "filter" => [
+      //         "enabled" => true,
+      //         "type" => "date",
+      //         "operator" => "<="
+      //     ]
+      // ]
     }
 
     /**
@@ -712,6 +808,16 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
         // call `editToolbarButton` to edit a toolbar button
         // call `editRowButton` to edit a row button
         // call `editButtonProperties` to do either of the above. All the edit functions accept the properties as an array
+
+        $this->editRowButton('view', [
+            'icon' => 'fa-edit',
+            'name' => 'Edit',
+            'class' => 'btn btn-outline-danger btn-sm'
+        ]);
+
+        $this->editToolbarButton('refresh', [
+            'class' => 'btn btn-danger'
+        ]);
     }
 
     /**
