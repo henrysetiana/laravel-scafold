@@ -45,10 +45,7 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
       "tglgaji",
       "tmtstop",
       "npwp",
-      "prsngapok",
-      "error_desc",
-      "error_fields",
-      "error_codes"
+      "prsngapok"
     ];
 
     public function setColumns()
@@ -73,7 +70,6 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ]
 		    ],
 		    "tgllhr" => [
-            "date" => "true",
 		        "search" => [
 		            "enabled" => true
 		        ],
@@ -85,7 +81,6 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		    ],
 		    "tglgaji" => [
 
-            "date" => "true",
 		        "search" => [
 		            "enabled" => true
 		        ],
@@ -97,7 +92,6 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		    ],
 		    "tmtstop" => [
 
-            "date" => "true",
 		        "search" => [
 		            "enabled" => true
 		        ],
@@ -117,33 +111,6 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ]
 		    ],
 		    "prsngapok" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "LIKE"
-		        ]
-		    ],
-		    "error_desc" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "LIKE"
-		        ]
-		    ],
-		    "error_fields" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "LIKE"
-		        ]
-		    ],
-		    "error_codes" => [
 		        "search" => [
 		            "enabled" => true
 		        ],

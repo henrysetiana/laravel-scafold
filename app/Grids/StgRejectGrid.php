@@ -42,46 +42,29 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
     */
 
     protected $tableColumns = [
-      "kdjnstrans"
+      "tgldapem",
+      "notas",
+      "namapensiunan",
+      "nama_penerima",
+      "tanggal_skep",
+      "kdjiwa",
+      "error_desc",
+      "error_fields",
+      "error_codes"
     ];
 
     public function setColumns()
     {
         $this->columns = [
-        "unique_key" => [
-            "search" => [
-                "enabled" => true
-            ],
-            "filter" => [
-                "enabled" => true,
-                "operator" => "="
-            ]
-        ],
 		    "tgldapem" => [
+            "date" => true,
 		        "search" => [
 		            "enabled" => true
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "kdjnstrans" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "jenis" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
+		            "operator" => "=",
+                "type" => "date"
 		        ]
 		    ],
 		    "notas" => [
@@ -90,16 +73,7 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "kdjiwa" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
+		            "operator" => "like"
 		        ]
 		    ],
 		    "penpok" => [
@@ -111,33 +85,73 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
 		            "operator" => "="
 		        ]
 		    ],
-		    "tistri" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tanak" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
-		    "tp" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ]
-		    ],
+        "namapensiunan" => [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ]
+        ],
+        "nama_penerima" => [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ]
+        ],
+
+        "tanggal_skep"=> [
+            "date" => true,
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "=",
+                "type" => "date"
+
+            ]
+        ],
+        "kdjiwa"=> [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ]
+        ],
+        "error_desc"=> [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ]
+        ],
+        "error_fields"=> [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ]
+        ],
+        "error_codes"=> [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ]
+        ]
 		];
       // $this->columns = [
       // "unique_key" => [
