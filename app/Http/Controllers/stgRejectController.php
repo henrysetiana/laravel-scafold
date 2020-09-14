@@ -66,7 +66,7 @@ class stgRejectController extends Controller
     public function show($id, Request $request, StgRejectGridInterface $stgRejectGrid)
     {
         //
-        // $stgRejectGrid->setColumns();
+        $stgRejectGrid->setColumns();
         $modal = [
             'model' => class_basename(stgReject::class),
             'route' => route('stgreject.update',$id),
