@@ -20,9 +20,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
      * @var array
      */
     protected $buttonsToGenerate = [
-        'create',
         'view',
-        'delete',
         'refresh',
         'export'
     ];
