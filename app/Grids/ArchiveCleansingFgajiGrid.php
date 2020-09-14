@@ -20,7 +20,7 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
      * @var array
      */
     protected $buttonsToGenerate = [
-        'view',
+        // 'view',
         'refresh',
         'export'
     ];
@@ -918,6 +918,10 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
         // call `editToolbarButton` to edit a toolbar button
         // call `editRowButton` to edit a row button
         // call `editButtonProperties` to do either of the above. All the edit functions accept the properties as an array
+
+        $this->editToolbarButton('refresh', [
+            'class' => 'btn btn-danger'
+        ]);
     }
 
     /**

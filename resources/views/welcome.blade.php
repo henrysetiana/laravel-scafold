@@ -21,24 +21,33 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm navbar-dark">
+<nav class="navbar navbar-expand-sm">
 <ul class="navbar-nav" style="width:100%;">
     <li class="nav-item">
         <img src="{{ asset('images/xeratic-long-sm.png') }}"/>
     </li>
-    <li class="nav-item">
-        <a class="" href="/stgreject">Stg Reject</a>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        dapem_b
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="/stgreject">Data Reject</a>
+        <a class="dropdown-item" href="/archivecleansing">Data Archived</a>
+      </div>
     </li>
-    <li class="nav-item">
-        <a class="" href="/stgreject">Stg Reject</a>
-    </li>
-    <li class="nav-item">
-        <a class="" href="/stgreject">Stg Reject</a>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        fgaji
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="/stgrejectfgaji">Data Reject</a>
+        <a class="dropdown-item" href="/archivecleansingfgaji">Data Archived</a>
+      </div>
     </li>
     <li style="flex:1;">
     </li>
     <li class="nav-item">
-        <a class="" href="/stgreject">Logout</a>
+        <a class="nav-link" href="/stgreject">Logout</a>
     </li>
 </ul>
 </nav>

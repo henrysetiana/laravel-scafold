@@ -20,7 +20,7 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
      * @var array
      */
     protected $buttonsToGenerate = [
-        'view',
+        // 'view',
         'refresh',
         'export'
     ];
@@ -683,6 +683,10 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
         // call `editToolbarButton` to edit a toolbar button
         // call `editRowButton` to edit a row button
         // call `editButtonProperties` to do either of the above. All the edit functions accept the properties as an array
+
+        $this->editToolbarButton('refresh', [
+            'class' => 'btn btn-danger'
+        ]);
     }
 
     /**
