@@ -76,14 +76,25 @@ class archiveCleansing extends Model
 {
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'archive_cleansing';
 
+
+    protected $primaryKey = 'unique_key';
+
+    /**
+     * The "type" of the auto-incrementing ID.
+     *
+     * @var string
+     */
+    protected $keyType = 'string';
+
+
     /**
      * @var array
      */
-    protected $fillable = ['unique_key', 'tgldapem', 'kdjnstrans', 'jenis', 'notas', 'kdjiwa', 'penpok', 'tistri', 'tanak', 'tp', 'tkd', 'tpp', 'tpajak', 'tberas', 'tcacat', 'ttewas', 'tbulat', 'kotor', 'ppajak', 'paskes', 'pkpkn', 'pkasda', 'ptaspen', 'psewa', 'passos', 'palimentasi', 'potongan', 'bersih', 'kodebyr', 'kdjnsdapem', 'namapensiunan', 'tgl_lahir_pensiunan', 'nama_penerima', 'tgl_lahir_penerima', 'kodecabang', 'tmtpensiun', 'nomor_skep', 'tanggal_skep', 'penerbit_skep', 'nip', 'norutdapem', 'kdpangkat', 'norek', 'kdhubkel', 'rapel', 'tdahor', 'kdhitung', 'kdsifatpok', 'masker', 'jmlistri', 'npwp', 'tgldiambil', 'infobank', 'tgr', 'jnssetor', 'tglsetor', 'updstamp', 'inputer', 'kdotentikasi', 'cleansing_flag', 'cleansing_date', 'cleansed_column', 'thn_tgl_skep', 'thn_tgldapem', 'created_at', 'updated_at'];
+    protected $fillable = ['tgldapem', 'kdjnstrans', 'jenis', 'notas', 'kdjiwa', 'penpok', 'tistri', 'tanak', 'tp', 'tkd', 'tpp', 'tpajak', 'tberas', 'tcacat', 'ttewas', 'tbulat', 'kotor', 'ppajak', 'paskes', 'pkpkn', 'pkasda', 'ptaspen', 'psewa', 'passos', 'palimentasi', 'potongan', 'bersih', 'kodebyr', 'kdjnsdapem', 'namapensiunan', 'tgl_lahir_pensiunan', 'nama_penerima', 'tgl_lahir_penerima', 'kodecabang', 'tmtpensiun', 'nomor_skep', 'tanggal_skep', 'penerbit_skep', 'nip', 'norutdapem', 'kdpangkat', 'norek', 'kdhubkel', 'rapel', 'tdahor', 'kdhitung', 'kdsifatpok', 'masker', 'jmlistri', 'npwp', 'tgldiambil', 'infobank', 'tgr', 'jnssetor', 'tglsetor', 'updstamp', 'inputer', 'kdotentikasi', 'cleansing_flag', 'cleansing_date', 'cleansed_column', 'thn_tgl_skep', 'thn_tgldapem', 'created_at', 'updated_at'];
 
 }

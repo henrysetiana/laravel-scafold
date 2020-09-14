@@ -106,14 +106,25 @@ class stgRejectFgaji extends Model
 {
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'stg_reject_fgaji';
 
+
+    protected $primaryKey = 'id';
+
+    /**
+     * The "type" of the auto-incrementing ID.
+     *
+     * @var string
+     */
+    protected $keyType = 'string';
+
+
     /**
      * @var array
      */
-    protected $fillable = ['id', 'tglgaji', 'kdjnstrans', 'nip', 'nama', 'glrdepan', 'glrbelakang', 'kdjenkel', 'tgllhr', 'kdstawin', 'jistri', 'janak', 'kdstapeg', 'tmtstop', 'kdpangkat', 'masker', 'prsngapok', 'tmttabel', 'kdeselon', 'kdfungsi', 'kdguru', 'kdstruk', 'kdberas', 'kdlangka', 'kdterpencil', 'kdtkd', 'kdtjkhusus', 'kdkorpri', 'kdkoperasi', 'kdirdhata', 'gapok', 'tjistri', 'tjanak', 'tjtpp', 'tjeselon', 'tjfungsi', 'tjstruk', 'tjguru', 'tjlangka', 'tjtkd', 'tjterpencil', 'tjkhusus', 'tjberas', 'tjpajak', 'tjaskes', 'tjumum', 'tjkk', 'tjkm', 'tbulat', 'kotor', 'piwp', 'piwp8', 'piwp2', 'paskes', 'ppajak', 'pbulog', 'ptaperum', 'psewa', 'phutang', 'pkorpri', 'pirdhata', 'pkoperasi', 'pjkk', 'pjkm', 'potongan', 'bersih', 'nodosir', 'kdssbp', 'kdskpd', 'kdsatker', 'npwp', 'niplama', 'kdhitung', 'kodebyr', 'norek', 'catatan', 'nu', 'hal', 'jeniskekurangan', 'kd_zakat', 'noktp', 'tmt_rapel', 'tat_rapel', 'jml_bulan', 'jnsguru', 'kddati1', 'kddati2', 'bln_gaji', 'thn_gaji', 'pemda', 'number_of_errors', 'error_desc', 'error_fields', 'error_codes', 'created_at', 'updated_at'];
+    protected $fillable = ['tglgaji', 'kdjnstrans', 'nip', 'nama', 'glrdepan', 'glrbelakang', 'kdjenkel', 'tgllhr', 'kdstawin', 'jistri', 'janak', 'kdstapeg', 'tmtstop', 'kdpangkat', 'masker', 'prsngapok', 'tmttabel', 'kdeselon', 'kdfungsi', 'kdguru', 'kdstruk', 'kdberas', 'kdlangka', 'kdterpencil', 'kdtkd', 'kdtjkhusus', 'kdkorpri', 'kdkoperasi', 'kdirdhata', 'gapok', 'tjistri', 'tjanak', 'tjtpp', 'tjeselon', 'tjfungsi', 'tjstruk', 'tjguru', 'tjlangka', 'tjtkd', 'tjterpencil', 'tjkhusus', 'tjberas', 'tjpajak', 'tjaskes', 'tjumum', 'tjkk', 'tjkm', 'tbulat', 'kotor', 'piwp', 'piwp8', 'piwp2', 'paskes', 'ppajak', 'pbulog', 'ptaperum', 'psewa', 'phutang', 'pkorpri', 'pirdhata', 'pkoperasi', 'pjkk', 'pjkm', 'potongan', 'bersih', 'nodosir', 'kdssbp', 'kdskpd', 'kdsatker', 'npwp', 'niplama', 'kdhitung', 'kodebyr', 'norek', 'catatan', 'nu', 'hal', 'jeniskekurangan', 'kd_zakat', 'noktp', 'tmt_rapel', 'tat_rapel', 'jml_bulan', 'jnsguru', 'kddati1', 'kddati2', 'bln_gaji', 'thn_gaji', 'pemda', 'number_of_errors', 'error_desc', 'error_fields', 'error_codes', 'created_at', 'updated_at'];
 
 }

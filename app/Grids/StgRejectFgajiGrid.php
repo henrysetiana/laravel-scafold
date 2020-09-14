@@ -38,7 +38,6 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
     * @return void
     * @throws \Exception if an error occurs during parsing of the data
     */
-
     protected $tableColumns = [
       "nip",
       "nama",
