@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\stgRejectController;
 use App\Http\Controllers\stgRejectFgajiController;
+use App\Http\Controllers\archiveCleansingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +15,4 @@ use App\Http\Controllers\stgRejectFgajiController;
 */
 Route::resource('/stgreject', 'stgRejectController');
 Route::resource('/stgrejectfgaji', 'stgRejectFgajiController');
+Route::resource('/archivecleansing', 'archiveCleansingController');
