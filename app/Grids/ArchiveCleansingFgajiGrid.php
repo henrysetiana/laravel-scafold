@@ -79,7 +79,8 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "LIKE",
+                "type" => "date"
 		        ]
 		    ],
 		    "tglgaji" => [
@@ -90,7 +91,8 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "LIKE",
+                "type" => "date"
 		        ]
 		    ],
 		    "tmtstop" => [
@@ -101,7 +103,8 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "LIKE",
+                "type" => "date"
 		        ]
 		    ],
 		    "npwp" => [

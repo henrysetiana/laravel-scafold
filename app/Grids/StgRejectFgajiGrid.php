@@ -78,7 +78,8 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "LIKE",
+                "type" => "date"
 		        ]
 		    ],
 		    "tglgaji" => [
@@ -89,7 +90,8 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "LIKE",
+                "type" => "date"
 		        ]
 		    ],
 		    "tmtstop" => [
@@ -100,7 +102,8 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "LIKE",
+                "type" => "date"
 		        ]
 		    ],
 		    "npwp" => [
