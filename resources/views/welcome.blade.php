@@ -22,12 +22,23 @@
 <body>
 
 <nav class="navbar navbar-expand-sm navbar-dark">
-<ul class="navbar-nav">
+<ul class="navbar-nav" style="width:100%;">
     <li class="nav-item">
         <img src="{{ asset('images/xeratic-long-sm.png') }}"/>
     </li>
     <li class="nav-item">
         <a class="" href="/stgreject">Stg Reject</a>
+    </li>
+    <li class="nav-item">
+        <a class="" href="/stgreject">Stg Reject</a>
+    </li>
+    <li class="nav-item">
+        <a class="" href="/stgreject">Stg Reject</a>
+    </li>
+    <li style="flex:1;">
+    </li>
+    <li class="nav-item">
+        <a class="" href="/stgreject">Logout</a>
     </li>
 </ul>
 </nav>
