@@ -3,25 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Grids\StgRejectGridInterface;
-use App\Grids\StgRejectGrid;
-use App\stgReject;
 
-class stgRejectController extends Controller
+use App\Grids\StgRejectFgajiGridInterface;
+use App\Grids\StgRejectFgajiGrid;
+use App\stgRejectFgaji;
+
+class stgRejectFgajiController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-     public function index(StgRejectGridInterface $stgRejectGrid, Request $request)
+     public function index(StgRejectFgajiGridInterface $stgRejectFgajiGrid, Request $request)
      {
          // the 'query' argument needs to be an instance of the eloquent query builder
          // you can load relationships at this point
                               // dd($request);exit;
-         $query = stgReject::orderBy('penpok', 'DESC');
+         $query = stgRejectFgaji::orderBy('gapok', 'DESC');
          // $query = stgReject::query();
-         return $stgRejectGrid
+         return $stgRejectFgajiGrid
                      ->create(['query' => $query, 'request' => $request])
                      ->renderOn('welcome'); // render the grid on the welcome view
 
@@ -32,18 +33,18 @@ class stgRejectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        //
-        $modal = [
-            'model' => class_basename(User::class),
-            'route' => route('stgreject.store'),
-            'action' => 'create',
-            'pjaxContainer' => $request->get('ref'),
-        ];
+      //
+      $modal = [
+          'model' => class_basename(stgRejectFgaji::class),
+          'route' => route('stgrejectfgaji.store'),
+          'action' => 'create',
+          'pjaxContainer' => $request->get('ref'),
+      ];
 
-        // modal
-        return view('modal', compact('modal'))->render();
+      // modal
+      return view('modal', compact('modal'))->render();
     }
 
     /**
@@ -63,23 +64,23 @@ class stgRejectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, Request $request, StgRejectGridInterface $stgRejectGrid)
-    {
-        //
-        $stgRejectGrid->setColumns();
-        $modal = [
-            'model' => class_basename(stgReject::class),
-            'route' => route('stgreject.update',$id),
-            'action' => 'update',
-            'method' => 'PUT',
-            'column' => $stgRejectGrid->columns,
-            'stgreject' => stgReject::where('unique_key','=', $id)->firstOrFail()->toArray(),
-            'pjaxContainer' => $request->get('ref'),
-        ];
+     public function show($id, Request $request, StgRejectFgajiGridInterface $stgRejectFgajiGrid)
+     {
+         //
+         $stgRejectFgajiGrid->setColumns();
+         $modal = [
+             'model' => class_basename(stgRejectFgaji::class),
+             'route' => route('stgrejectfgaji.update',$id),
+             'action' => 'update',
+             'method' => 'PUT',
+             'column' => $stgRejectFgajiGrid->columns,
+             'stgreject' => stgRejectFgaji::where('id','=', $id)->firstOrFail()->toArray(),
+             'pjaxContainer' => $request->get('ref'),
+         ];
 
-        // modal
-        return view('modal', compact('modal'))->render();
-    }
+         // modal
+         return view('modal', compact('modal'))->render();
+     }
 
     /**
      * Show the form for editing the specified resource.
@@ -99,12 +100,12 @@ class stgRejectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-      $stgReject = stgReject::find($id);
-      $stgReject->fill($request->all())->save();
-      return response()->json(['message' => 'record '.$id.' is updated' , 'success' => true]);
-    }
+     public function update(Request $request, $id)
+     {
+       $stgRejectFgaji = stgRejectFgaji::find($id);
+       $stgRejectFgaji->fill($request->all())->save();
+       return response()->json(['message' => 'record '.$id.' is updated' , 'success' => true]);
+     }
 
     /**
      * Remove the specified resource from storage.
