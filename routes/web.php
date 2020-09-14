@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\stgRejectController;
+use App\Http\Controllers\stgRejectFgajiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,3 +13,4 @@ use App\Http\Controllers\stgRejectController;
 |
 */
 Route::resource('/stgreject', 'stgRejectController');
+Route::resource('/stgrejectfgaji', 'stgRejectFgajiController');
