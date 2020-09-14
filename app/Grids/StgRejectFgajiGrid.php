@@ -42,14 +42,13 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
     {
         $this->columns = [
 		    "id" => [
-		        "label" => "ID",
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "="
-		        ],
-		        "styles" => [
-		            "column" => "grid-w-10"
-		        ]
+          "search" => [
+              "enabled" => true
+          ],
+          "filter" => [
+              "enabled" => true,
+              "operator" => "="
+          ]
 		    ],
 		    "tglgaji" => [
 

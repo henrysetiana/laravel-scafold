@@ -20,7 +20,7 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
      * @var array
      */
     protected $buttonsToGenerate = [
-        // 'view',
+         'view',
         'refresh',
         'export'
     ];
@@ -654,7 +654,7 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
         $this->setDeleteRouteName('archivecleansing.destroy');
 
         // default route parameter
-        $this->setDefaultRouteParameter('id');
+        $this->setDefaultRouteParameter('unique_key');
     }
 
     /**
