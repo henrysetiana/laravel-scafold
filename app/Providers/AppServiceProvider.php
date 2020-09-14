@@ -9,6 +9,8 @@ use App\Grids\StgRejectFgajiGridInterface;
 use App\Grids\StgRejectFgajiGrid;
 use App\Grids\ArchiveCleansingGridInterface;
 use App\Grids\ArchiveCleansingGrid;
+use App\Grids\ArchiveCleansingFgajiGridInterface;
+use App\Grids\ArchiveCleansingFgajiGrid;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
           $this->app->bind(StgRejectGridInterface::class, StgRejectGrid::class);
           $this->app->bind(StgRejectFgajiGridInterface::class, StgRejectFgajiGrid::class);
           $this->app->bind(ArchiveCleansingGridInterface::class, ArchiveCleansingGrid::class);
+          $this->app->bind(ArchiveCleansingFgajiGridInterface::class, ArchiveCleansingFgajiGrid::class);
      }
 
 
