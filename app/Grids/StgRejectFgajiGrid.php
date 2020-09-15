@@ -61,7 +61,8 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        "filter" => [
 		            "enabled" => true,
 		            "operator" => "LIKE"
-		        ]
+		        ],
+            "editable" => false,
 		    ],
 		    "nama" => [
 		        "search" => [
@@ -81,7 +82,10 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		            "enabled" => true,
 		            "operator" => "LIKE",
                 "type" => "date"
-		        ]
+		        ],
+		        "styles" => [
+		            "column" => "tgl_column_header"
+		        ],
 		    ],
 		    "tglgaji" => [
 
@@ -93,7 +97,10 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		            "enabled" => true,
 		            "operator" => "LIKE",
                 "type" => "date"
-		        ]
+		        ],
+		        "styles" => [
+		            "column" => "tgl_column_header"
+		        ],
 		    ],
 		    "tmtstop" => [
 
@@ -105,7 +112,10 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		            "enabled" => true,
 		            "operator" => "LIKE",
                 "type" => "date"
-		        ]
+		        ],
+		        "styles" => [
+		            "column" => "tgl_column_header"
+		        ],
 		    ],
 		    "npwp" => [
 		        "search" => [
@@ -141,7 +151,15 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        "filter" => [
 		            "enabled" => true,
 		            "operator" => "LIKE"
-		        ]
+		        ],
+		        "styles" => [
+		            "column" => "error_column_header"
+		        ],
+            "raw" => true,
+            "editable" => false,
+            "presenter" => function($columnData, $columnName) {
+                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
+            }
 		    ],
 		    "error_fields" => [
 		        "search" => [
@@ -150,7 +168,15 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        "filter" => [
 		            "enabled" => true,
 		            "operator" => "LIKE"
-		        ]
+		        ],
+		        "styles" => [
+		            "column" => "error_column_header"
+		        ],
+            "raw" => true,
+            "editable" => false,
+            "presenter" => function($columnData, $columnName) {
+                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
+            }
 		    ],
 		    "error_codes" => [
 		        "search" => [
@@ -159,7 +185,15 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        "filter" => [
 		            "enabled" => true,
 		            "operator" => "LIKE"
-		        ]
+		        ],
+		        "styles" => [
+		            "column" => "error_column_header"
+		        ],
+            "raw" => true,
+            "editable" => false,
+            "presenter" => function($columnData, $columnName) {
+                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
+            }
 		    ],
 		];
     }

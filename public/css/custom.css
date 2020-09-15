@@ -123,6 +123,11 @@ table
   min-width: 110px;
 }
 
+.tgl_column_header
+{
+  min-width: 110px;
+}
+
 .grid-title
 {
   visibility: hidden;
