@@ -47,7 +47,7 @@
     <li style="flex:1;">
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/stgreject">Logout</a>
+        <a class="nav-link" href="/welcome">Logout</a>
     </li>
 </ul>
 </nav>

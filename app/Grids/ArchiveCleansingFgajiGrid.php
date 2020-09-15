@@ -12,7 +12,7 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
      *
      * @var string
      */
-    protected $name = 'ArchiveCleansingFgaji';
+    protected $name = 'Data Archived - f_gaji';
 
     /**
      * List of buttons to be generated on the grid

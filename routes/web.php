@@ -14,6 +14,9 @@ use App\Http\Controllers\archiveCleansingFgajiController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::redirect('/', '/welcome');
+Route::view('/welcome', 'login');
+// Route::view('/welcome', 'welcome');
 Route::resource('/stgreject', 'stgRejectController');
 Route::resource('/stgrejectfgaji', 'stgRejectFgajiController');
 Route::resource('/archivecleansing', 'archiveCleansingController');

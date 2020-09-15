@@ -12,7 +12,7 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
      *
      * @var string
      */
-    protected $name = 'StgReject';
+    protected $name = 'Data Reject - dapem_b';
 
     /**
      * List of buttons to be generated on the grid
@@ -65,7 +65,10 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
 		            "enabled" => true,
 		            "operator" => "=",
                 "type" => "date"
-		        ]
+		        ],
+		        "styles" => [
+		            "column" => "tgldapem_column_header"
+		        ],
 		    ],
 		    "notas" => [
 		        "search" => [
@@ -101,9 +104,11 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
             "filter" => [
                 "enabled" => true,
                 "operator" => "like"
-            ]
+            ],
+            "styles" => [
+                "column" => "nama_penerima_column_header"
+            ],
         ],
-
         "tanggal_skep"=> [
             "date" => true,
             "search" => [
@@ -114,7 +119,10 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
                 "operator" => "=",
                 "type" => "date"
 
-            ]
+            ],
+		        "styles" => [
+		            "column" => "tanggal_skep_header"
+		        ]
         ],
         "kdjiwa"=> [
             "search" => [
@@ -132,7 +140,15 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
             "filter" => [
                 "enabled" => true,
                 "operator" => "like"
-            ]
+            ],
+		        "styles" => [
+		            "column" => "error_column_header"
+		        ],
+            "raw" => true,
+            "editable" => false,
+            "presenter" => function($columnData, $columnName) {
+                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
+            }
         ],
         "error_fields"=> [
             "search" => [
@@ -141,7 +157,15 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
             "filter" => [
                 "enabled" => true,
                 "operator" => "like"
-            ]
+            ],
+		        "styles" => [
+		            "column" => "error_column_header"
+		        ],
+            "raw" => true,
+            "editable" => false,
+            "presenter" => function($columnData, $columnName) {
+                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
+            }
         ],
         "error_codes"=> [
             "search" => [
@@ -150,7 +174,15 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
             "filter" => [
                 "enabled" => true,
                 "operator" => "like"
-            ]
+            ],
+		        "styles" => [
+		            "column" => "error_column_header"
+		        ],
+            "raw" => true,
+            "editable" => false,
+            "presenter" => function($columnData, $columnName) {
+                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
+            }
         ]
 		];
       // $this->columns = [

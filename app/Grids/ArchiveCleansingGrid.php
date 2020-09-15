@@ -12,7 +12,7 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
      *
      * @var string
      */
-    protected $name = 'ArchiveCleansing';
+    protected $name = 'Data Archived - dapem_b';
 
     /**
      * List of buttons to be generated on the grid
@@ -56,6 +56,7 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
     {
         $this->columns = [
 		    "tgldapem" => [
+            "date" => true,
 		        "search" => [
 		            "enabled" => true
 		        ],
@@ -63,7 +64,10 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
 		            "enabled" => true,
 		            "operator" => "=",
                 "type" => "date"
-		        ]
+		        ],
+		        "styles" => [
+		            "column" => "tgldapem_column_header"
+		        ],
 		    ],
 		    "notas" => [
 		        "search" => [
@@ -84,62 +88,98 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
 		        ]
 		    ],
         "namapensiunan" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "like"
-		        ]
-		    ],
-		    "nama_penerima" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "like"
-		        ]
-		    ],
-		    "tanggal_skep" => [
-		        "search" => [
-		            "enabled" => true
-		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "=",
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ]
+        ],
+        "nama_penerima" => [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ],
+            "styles" => [
+                "column" => "nama_penerima_column_header"
+            ],
+        ],
+        "tanggal_skep"=> [
+            "date" => true,
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "=",
                 "type" => "date"
-		        ]
-		    ],
 
+            ],
+		        "styles" => [
+		            "column" => "tanggal_skep_header"
+		        ]
+        ],
         "kdjiwa"=> [
-		        "search" => [
-		            "enabled" => true
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ]
+        ],
+        "error_desc"=> [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ],
+		        "styles" => [
+		            "column" => "error_column_header"
 		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "like"
-		        ]
-		    ],
-        "cleansed_column"=> [
-		        "search" => [
-		            "enabled" => true
+            "raw" => true,
+            "presenter" => function($columnData, $columnName) {
+                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
+            }
+        ],
+        "error_fields"=> [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ],
+		        "styles" => [
+		            "column" => "error_column_header"
 		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "like"
-		        ]
-		    ],
-        "updated_at"=> [
-		        "search" => [
-		            "enabled" => true
+            "raw" => true,
+            "presenter" => function($columnData, $columnName) {
+                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
+            }
+        ],
+        "error_codes"=> [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ],
+		        "styles" => [
+		            "column" => "error_column_header"
 		        ],
-		        "filter" => [
-		            "enabled" => true,
-		            "operator" => "=",
-                "type" => "date"
-		        ]
-		    ],
+            "raw" => true,
+            "presenter" => function($columnData, $columnName) {
+                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
+            }
+        ]
 		];
     }
 
