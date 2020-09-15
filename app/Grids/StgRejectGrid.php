@@ -12,7 +12,7 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
      *
      * @var string
      */
-    protected $name = 'Data Reject - dapem_b';
+    protected $name = 'StgReject';
 
     /**
      * List of buttons to be generated on the grid
@@ -66,6 +66,7 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
 		            "operator" => "=",
                 "type" => "date"
 		        ],
+            "editable" => false,
 		        "styles" => [
 		            "column" => "tgldapem_column_header"
 		        ],

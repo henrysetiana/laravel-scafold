@@ -23,7 +23,7 @@ class stgRejectController extends Controller
          // $query = stgReject::query();
          return $stgRejectGrid
                      ->create(['query' => $query, 'request' => $request])
-                     ->renderOn('welcome'); // render the grid on the welcome view
+                     ->renderOn('welcome', ["title"=>"Data Reject - dapem_b"]); // render the grid on the welcome view
 
      }
 

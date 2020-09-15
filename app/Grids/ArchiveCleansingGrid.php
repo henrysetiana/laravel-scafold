@@ -12,7 +12,7 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
      *
      * @var string
      */
-    protected $name = 'Data Archived - dapem_b';
+    protected $name = 'ArchiveCleansing';
 
     /**
      * List of buttons to be generated on the grid

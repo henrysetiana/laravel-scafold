@@ -24,7 +24,7 @@ class archiveCleansingController extends Controller
          // $query = stgReject::query();
          return $archiveCleansingGrid
                      ->create(['query' => $query, 'request' => $request])
-                     ->renderOn('welcome'); // render the grid on the welcome view
+                     ->renderOn('welcome', ["title"=>"Data Archived - dapem_b"]); // render the grid on the welcome view
 
      }
 

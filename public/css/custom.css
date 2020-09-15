@@ -122,3 +122,8 @@ table
 {
   min-width: 110px;
 }
+
+.grid-title
+{
+  visibility: hidden;
+}

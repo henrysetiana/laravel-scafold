@@ -22,7 +22,7 @@ class archiveCleansingFgajiController extends Controller
          $query = ArchiveCleansingFgaji::orderBy('gapok', 'DESC');
          return $archiveCleansingFgajiGrid
                      ->create(['query' => $query, 'request' => $request])
-                     ->renderOn('welcome'); // render the grid on the welcome view
+                     ->renderOn('welcome', ["title"=>"Data Archived - f_gaji"]); // render the grid on the welcome view
 
      }
 

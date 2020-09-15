@@ -24,7 +24,7 @@ class stgRejectFgajiController extends Controller
          // $query = stgReject::query();
          return $stgRejectFgajiGrid
                      ->create(['query' => $query, 'request' => $request])
-                     ->renderOn('welcome'); // render the grid on the welcome view
+                     ->renderOn('welcome', ["title"=>"Data Reject - f_gaji"]); // render the grid on the welcome view
 
      }
 

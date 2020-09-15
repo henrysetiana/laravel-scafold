@@ -53,6 +53,7 @@
 </nav>
 
 <div class="container-fluid" style="margin-bottom: 100px; padding-top:30px;">
+    <h4 style="padding: 0.75rem 1.25rem;">{!! $title !!}</h4>
     {!! $grid !!}
 </div>
 
@@ -91,6 +92,8 @@ $(document).on('pjax:end', function () {
     NProgress.done();
 });
 
+
+// $('.grid-title').html("{{$title}}")
 
 </script>
 <!-- entry point for all scripts injected by the generated grids (required) -->

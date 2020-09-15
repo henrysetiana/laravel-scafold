@@ -12,7 +12,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
      *
      * @var string
      */
-    protected $name = 'Data Reject - f_gaji';
+    protected $name = 'StgRejectFgaji';
 
     /**
      * List of buttons to be generated on the grid
