@@ -24,13 +24,14 @@
 <body>
 
 	<div class="limiter">
-		<div class="container-login100">
+		<div class="container-login100" style="background:url('{{ asset('images/bg-2.jpg') }}')">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="{{ asset('login/images/img-01.png') }}" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" style="display:flex; flex-direction:column;">
+          <img src="{{ asset('images/logo-animate-merged.gif') }}" alt="IMG" style="width:150px; margin:auto; margin-bottom:30px;">
 					<span class="login100-form-title">
 						Login
 					</span>
