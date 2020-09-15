@@ -46,6 +46,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
       "tmtstop",
       "npwp",
       "prsngapok",
+      "gapok",
       "error_desc",
       "error_fields",
       "error_codes"
@@ -122,6 +123,15 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        "filter" => [
 		            "enabled" => true,
 		            "operator" => "LIKE"
+		        ]
+		    ],
+        "gapok" => [
+		        "search" => [
+		            "enabled" => true
+		        ],
+		        "filter" => [
+		            "enabled" => true,
+		            "operator" => "="
 		        ]
 		    ],
 		    "error_desc" => [
