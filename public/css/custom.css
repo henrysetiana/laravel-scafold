@@ -132,3 +132,8 @@ table
 {
   visibility: hidden;
 }
+
+input.has_error
+{
+  border-color:#f64e60;
+}

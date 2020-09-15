@@ -62,7 +62,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		            "enabled" => true,
 		            "operator" => "LIKE"
 		        ],
-            "editable" => false,
+            // "editable" => false,
 		    ],
 		    "nama" => [
 		        "search" => [

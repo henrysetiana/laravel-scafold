@@ -67,7 +67,7 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
 		            "operator" => "=",
                 "type" => "date"
 		        ],
-            "editable" => false,
+            // "editable" => false,
 		        "styles" => [
 		            "column" => "tgldapem_column_header"
 		        ],
