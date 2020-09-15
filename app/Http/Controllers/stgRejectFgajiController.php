@@ -20,7 +20,14 @@ class stgRejectFgajiController extends Controller
          // the 'query' argument needs to be an instance of the eloquent query builder
          // you can load relationships at this point
                               // dd($request);exit;
-         $query = stgRejectFgaji::orderBy('gapok', 'DESC');
+
+         if($request->sort_by == null){
+           $query = stgRejectFgaji::orderBy('gapok', 'DESC');
+         }else{
+           $query = stgRejectFgaji::query();
+         }
+
+
          // $query = stgReject::query();
          return $stgRejectFgajiGrid
                      ->create(['query' => $query, 'request' => $request])
