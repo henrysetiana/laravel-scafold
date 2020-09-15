@@ -20,7 +20,11 @@ class archiveCleansingController extends Controller
          // the 'query' argument needs to be an instance of the eloquent query builder
          // you can load relationships at this point
                               // dd($request);exit;
-         $query = ArchiveCleansing::orderBy('penpok', 'DESC');
+         if($request->sort_by == null){
+           $query = ArchiveCleansing::orderBy('penpok', 'DESC');
+         }else{
+           $query = ArchiveCleansing::query();
+         }
          // $query = stgReject::query();
          return $archiveCleansingGrid
                      ->create(['query' => $query, 'request' => $request])

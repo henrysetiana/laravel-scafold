@@ -45,7 +45,8 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
       "tglgaji",
       "tmtstop",
       "npwp",
-      "prsngapok"
+      "prsngapok",
+      "gapok"
     ];
 
     public function setColumns()
@@ -111,6 +112,15 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ]
 		    ],
 		    "prsngapok" => [
+		        "search" => [
+		            "enabled" => true
+		        ],
+		        "filter" => [
+		            "enabled" => true,
+		            "operator" => "LIKE"
+		        ]
+		    ],
+        "gapok" => [
 		        "search" => [
 		            "enabled" => true
 		        ],

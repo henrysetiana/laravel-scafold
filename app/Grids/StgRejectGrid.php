@@ -46,6 +46,7 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
       "notas",
       "namapensiunan",
       "nama_penerima",
+      "penpok",
       "tanggal_skep",
       "kdjiwa",
       "error_desc",

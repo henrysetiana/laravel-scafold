@@ -19,7 +19,11 @@ class archiveCleansingFgajiController extends Controller
      {
          // the 'query' argument needs to be an instance of the eloquent query builder
          // you can load relationships at this point
-         $query = ArchiveCleansingFgaji::orderBy('gapok', 'DESC');
+         if($request->sort_by == null){
+           $query = ArchiveCleansingFgaji::orderBy('gapok', 'DESC');
+         }else{
+           $query = ArchiveCleansingFgaji::query();
+         }
          return $archiveCleansingFgajiGrid
                      ->create(['query' => $query, 'request' => $request])
                      ->renderOn('welcome', ["title"=>"Data Archived - f_gaji"]); // render the grid on the welcome view

@@ -18,8 +18,12 @@ class stgRejectController extends Controller
      {
          // the 'query' argument needs to be an instance of the eloquent query builder
          // you can load relationships at this point
-                              // dd($request);exit;
-         $query = stgReject::orderBy('penpok', 'DESC');
+          if($request->sort_by == null){
+            $query = stgReject::orderBy('penpok', 'DESC');
+          }else{
+            $query = stgReject::query();
+          }
+
          // $query = stgReject::query();
          return $stgRejectGrid
                      ->create(['query' => $query, 'request' => $request])
