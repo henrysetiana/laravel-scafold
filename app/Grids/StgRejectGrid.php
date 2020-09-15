@@ -90,7 +90,7 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "="
+		            "operator" => "like"
 		        ]
 		    ],
         "namapensiunan" => [

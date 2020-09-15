@@ -84,7 +84,7 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "="
+		            "operator" => "like"
 		        ]
 		    ],
         "namapensiunan" => [

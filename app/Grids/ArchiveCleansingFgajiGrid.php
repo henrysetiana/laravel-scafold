@@ -58,7 +58,7 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ]
 		    ],
 		    "nama" => [
@@ -67,7 +67,7 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ]
 		    ],
 		    "tgllhr" => [
@@ -76,7 +76,7 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE",
+		            "operator" => "like",
                 "type" => "date"
 		        ]
 		    ],
@@ -87,7 +87,7 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE",
+		            "operator" => "like",
                 "type" => "date"
 		        ]
 		    ],
@@ -98,7 +98,7 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE",
+		            "operator" => "like",
                 "type" => "date"
 		        ]
 		    ],
@@ -108,7 +108,7 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ]
 		    ],
 		    "prsngapok" => [
@@ -117,7 +117,7 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ]
 		    ],
         "gapok" => [
@@ -126,7 +126,7 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ]
 		    ],
         "updated_at" => [

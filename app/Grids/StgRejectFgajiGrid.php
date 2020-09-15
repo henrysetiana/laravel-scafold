@@ -60,7 +60,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ],
             // "editable" => false,
 		    ],
@@ -70,7 +70,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ]
 		    ],
 		    "tgllhr" => [
@@ -80,7 +80,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE",
+		            "operator" => "like",
                 "type" => "date"
 		        ],
 		        "styles" => [
@@ -95,7 +95,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE",
+		            "operator" => "like",
                 "type" => "date"
 		        ],
 		        "styles" => [
@@ -110,7 +110,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE",
+		            "operator" => "like",
                 "type" => "date"
 		        ],
 		        "styles" => [
@@ -123,7 +123,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ]
 		    ],
 		    "prsngapok" => [
@@ -132,7 +132,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ]
 		    ],
         "gapok" => [
@@ -150,7 +150,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ],
 		        "styles" => [
 		            "column" => "error_column_header"
@@ -167,7 +167,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ],
 		        "styles" => [
 		            "column" => "error_column_header"
@@ -184,7 +184,7 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "LIKE"
+		            "operator" => "like"
 		        ],
 		        "styles" => [
 		            "column" => "error_column_header"
