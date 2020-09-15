@@ -49,9 +49,12 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
       "penpok",
       "tanggal_skep",
       "kdjiwa",
+      "tanak",
+      "tistri",
       "error_desc",
       "error_fields",
-      "error_codes"
+      "error_codes",
+      "updated_at"
     ];
 
     public function setColumns()
@@ -135,6 +138,24 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
                 "operator" => "like"
             ]
         ],
+        "tanak"=> [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ]
+        ],
+        "tistri"=> [
+            "search" => [
+                "enabled" => true
+            ],
+            "filter" => [
+                "enabled" => true,
+                "operator" => "like"
+            ]
+        ],
         "error_desc"=> [
             "search" => [
                 "enabled" => true
@@ -185,6 +206,16 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
             "presenter" => function($columnData, $columnName) {
                 return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
             }
+        ],
+        "updated_at" => [
+            "sort" => false,
+            "date" => "true",
+            "filter" => [
+                "enabled" => true,
+                "type" => "date",
+                "operator" => "<="
+            ],
+
         ]
 		];
       // $this->columns = [
