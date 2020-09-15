@@ -132,53 +132,15 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
                 "operator" => "like"
             ]
         ],
-        "error_desc"=> [
-            "search" => [
-                "enabled" => true
-            ],
+        "updated_at" => [
+            "sort" => false,
+            "date" => "true",
             "filter" => [
                 "enabled" => true,
-                "operator" => "like"
+                "type" => "date",
+                "operator" => "<="
             ],
-		        "styles" => [
-		            "column" => "error_column_header"
-		        ],
-            "raw" => true,
-            "presenter" => function($columnData, $columnName) {
-                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
-            }
-        ],
-        "error_fields"=> [
-            "search" => [
-                "enabled" => true
-            ],
-            "filter" => [
-                "enabled" => true,
-                "operator" => "like"
-            ],
-		        "styles" => [
-		            "column" => "error_column_header"
-		        ],
-            "raw" => true,
-            "presenter" => function($columnData, $columnName) {
-                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
-            }
-        ],
-        "error_codes"=> [
-            "search" => [
-                "enabled" => true
-            ],
-            "filter" => [
-                "enabled" => true,
-                "operator" => "like"
-            ],
-		        "styles" => [
-		            "column" => "error_column_header"
-		        ],
-            "raw" => true,
-            "presenter" => function($columnData, $columnName) {
-                return "<div style='max-width:135px;'>".$columnData[$columnName]."</div>";
-            }
+
         ]
 		];
     }

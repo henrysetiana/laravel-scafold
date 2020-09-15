@@ -27,12 +27,18 @@
       <div class="col-sm-8">
           <input type="text" class="form-control {{$input_class}}" id="{{$key}}" name="{{$key}}" <?php if(isset($value["editable"]) && !$value["editable"] || $input_class!="has_error") echo "disabled";?>
                  placeholder="Enter String" value="{{ $modal['stgreject'][$key] }}">
+          <?php if(count($error_descs) > 0):?>
+            <ul style="padding-left:15px;margin-bottom:0px;">
+          <?php endif;?>
           <?php foreach($error_descs as $error_desc):?>
             <?php //echo explode(" ",$error_desc)[0];?>
             <?php if(strtoupper(explode(" ",$error_desc)[0])==strtoupper($key)):?>
-              <span style="color:red; font-size:70%;">{!!$error_desc!!}</span><br/>
+              <li style="color:red; font-size:70%;">{!!$error_desc!!}</li>
             <?php endif;?>
           <?php endforeach;?>
+          <?php if(count($error_descs) > 0):?>
+            </ul>
+          <?php endif;?>
       </div>
   </div>
 <?php endif; ?>

@@ -129,6 +129,16 @@ class ArchiveCleansingFgajiGrid extends Grid implements ArchiveCleansingFgajiGri
 		            "operator" => "LIKE"
 		        ]
 		    ],
+        "updated_at" => [
+            "sort" => false,
+            "date" => "true",
+            "filter" => [
+                "enabled" => true,
+                "type" => "date",
+                "operator" => "<="
+            ],
+
+        ]
 		];
     }
 
