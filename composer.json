@@ -16,7 +16,8 @@
         "laravel/ui": "^1.2",
         "laravelcollective/html": "^5.8",
         "leantony/laravel-grid": "~2.0",
-        "maatwebsite/excel": "^3.1"
+        "maatwebsite/excel": "^3.1",
+        "symfony/dom-crawler": "^4.4"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
