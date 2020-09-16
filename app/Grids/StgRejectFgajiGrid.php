@@ -40,7 +40,9 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
     */
     protected $tableColumns = [
       "nip",
+      "glrdepan",
       "nama",
+      "glrbelakang",
       "tgllhr",
       "tglgaji",
       "tmtstop",
@@ -71,7 +73,39 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        "filter" => [
 		            "enabled" => true,
 		            "operator" => "like"
-		        ]
+		        ],
+            "acuan_columns" => [
+              "gelar_depan_acuan",
+              "nama_acuan",
+              "gelar_belakang_acuan"
+            ],
+            "correct_acuan_column_index" => 1
+		    ],
+		    "glrdepan" => [
+		        "search" => [
+		            "enabled" => true
+		        ],
+		        "filter" => [
+		            "enabled" => true,
+		            "operator" => "like"
+		        ],
+            "acuan_columns" => [
+              "gelar_depan_acuan",
+            ],
+            "correct_acuan_column_index" => 0
+		    ],
+		    "glrbelakang" => [
+		        "search" => [
+		            "enabled" => true
+		        ],
+		        "filter" => [
+		            "enabled" => true,
+		            "operator" => "like"
+		        ],
+            "acuan_columns" => [
+              "gelar_belakang_acuan"
+            ],
+            "correct_acuan_column_index" => 0
 		    ],
 		    "tgllhr" => [
             "date" => "true",

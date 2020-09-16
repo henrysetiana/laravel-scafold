@@ -100,7 +100,11 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
             "filter" => [
                 "enabled" => true,
                 "operator" => "like"
-            ]
+            ],
+            "acuan_columns" => [
+              "namapensiunan_acuan",
+            ],
+            "correct_acuan_column_index" => 0
         ],
         "nama_penerima" => [
             "search" => [
@@ -113,6 +117,10 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
             "styles" => [
                 "column" => "nama_penerima_column_header"
             ],
+            "acuan_columns" => [
+              "nama_penerima_acuan",
+            ],
+            "correct_acuan_column_index" => 0
         ],
         "tanggal_skep"=> [
             "date" => true,
