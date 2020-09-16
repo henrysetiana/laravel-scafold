@@ -56,7 +56,7 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
     {
         $this->columns = [
 		    "tgldapem" => [
-            "date" => true,
+
 		        "search" => [
 		            "enabled" => true
 		        ],
@@ -109,7 +109,7 @@ class ArchiveCleansingGrid extends Grid implements ArchiveCleansingGridInterface
             ],
         ],
         "tanggal_skep"=> [
-            "date" => true,
+
             "search" => [
                 "enabled" => true
             ],

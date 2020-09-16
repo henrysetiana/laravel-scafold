@@ -61,7 +61,7 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
     {
         $this->columns = [
 		    "tgldapem" => [
-            "date" => true,
+            
 		        "search" => [
 		            "enabled" => true
 		        ],
@@ -123,7 +123,7 @@ class StgRejectGrid extends Grid implements StgRejectGridInterface
             "correct_acuan_column_index" => 0
         ],
         "tanggal_skep"=> [
-            "date" => true,
+
             "search" => [
                 "enabled" => true
             ],
