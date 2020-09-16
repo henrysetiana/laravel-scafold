@@ -137,14 +137,12 @@ class StgRejectFgajiGrid extends Grid implements StgRejectFgajiGridInterface
 		        ],
 		    ],
 		    "tmtstop" => [
-
-            "date" => "true",
 		        "search" => [
 		            "enabled" => true
 		        ],
 		        "filter" => [
 		            "enabled" => true,
-		            "operator" => "like",
+		            "operator" => "=",
                 "type" => "date"
 		        ],
 		        "styles" => [
